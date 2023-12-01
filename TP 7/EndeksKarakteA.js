@@ -10,10 +10,19 @@ while(!chenKarakte.trim() ){
     chenKarakte = prompt(" Tanpri eseye anko : ")
 }
 
-let endeksA =  chenKarakte.indexOf("a");
+//Varyab boolean k ap pemet nou konnen si l jwenn let a
+test = false;
 
-// Kondisyon pou si pat gen okenn mo ki gen a e afiche chanjman
-if (!endeksA === undefined) {
+for (let i = 0; i < chenKarakte.length; i++) {
+    if (chenKarakte[i] === "a") {
+        endeksA = i;
+        test = true;
+        break;  // Soti nan bouk la lè ou jwenn premye "a"
+    }
+}
+
+// Kondisyon pou si pat gen okenn mo ki gen a 
+if (test === true) {
     console.info("Sa se chen lan : "+ chenKarakte);
     console.info("Index premye let la ki gen a se : " + endeksA);
 } else {
