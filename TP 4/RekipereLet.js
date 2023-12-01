@@ -26,7 +26,8 @@ while(i < tabloKarakte.length){
     i++
 }
 
-let TabloInisyal = AnsanmInisyal.split(" ");
+//N ap ajoute mo yo nan TabloInistyal e an menm tan separe et retire espas yo nan fen a komansman
+let TabloInisyal = AnsanmInisyal.trim().split(" ");
 
 //N ap afiche inisyal yo
 console.info(" Sa w te ensere yo : [ " + chenKarakte + "]");
